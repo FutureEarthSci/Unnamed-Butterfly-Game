@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Task</title>
+    <link rel="stylesheet" href="http://192.168.1.17:3000/styles.css">
+  </head>
+  <body>
+    <h1 class="centeredTxt">unnamed butterfly game</h1>
+
+    <div id="namePortal" class="centeredTxt">
+      <label for="nameInput">Name</label>
+      <input id="nameInput" name="nameInput" autocomplete="off" /><button onclick="enterName();">submit</button>
+    </div>
+
+    <div id="nameBoard" class="centeredTxt">
+      <h4>people playing:</h4><br>
+      <div id="nameList"></div>
+      <div id="butterfliesLoaded">
+        <p>total loaded templates: </p>
+      </div>
+      <div id="adminButton" class="centeredTxt">
+        <button id="refreshLoaded" onclick="pingLoaded();">ping loaded</button>
+        <button id="startGameBtn" onclick="startGame();">START GAME</button>
+      </div>
+    </div>
+    
+
+
+    <div id="preview" class="centeredTxt">
+      <canvas id="poisonCanvas"></canvas>
+      <h4>Here Lies a Poisonous Butterfly</h4>
+    </div>
+
+    <div id="game">
+      <button type="button" class="toolBtn" id="brush" onclick="setTool(0);">brush</button>
+      <button type="button" class="toolBtn" id="eraser" onclick="setTool(1);">eraser</button>
+      <button type="button" class="toolBtn" id="bucket" onclick="setTool(2);">bucket</button>
+      <button type="button" id="resetBtn" onclick="clearCanvas();">reset</button>
+      <p id="dispTool">current tool: brush</p>
+      <div id="colorBox"></div>
+      <p id="dispColor">current color: "#EE4B2B"</p>
+      
+      <button type="button" class="colorBtn" onclick="setColor(colorList['red']);">red</button>
+      <button type="button" class="colorBtn" onclick="setColor(colorList['blue']);">blue</button>
+      <button type="button" class="colorBtn" onclick="setColor(colorList['green']);">green</button>
+      <button type="button" class="colorBtn" onclick="setColor(colorList['yellow']);">yellow</button>
+      <button type="button" class="colorBtn" onclick="setColor(colorList['orange']);">orange</button>
+      <br>
+      <button type="button" class="colorBtn" onclick="setColor(colorList['violet']);">violet</button>
+      <button type="button" class="colorBtn" onclick="setColor(colorList['grey']);">grey</button>
+      <button type="button" class="colorBtn" onclick="setColor(colorList['turquoise']);">turquoise</button>
+      <button type="button" class="colorBtn" onclick="setColor(colorList['black']);">black</button>
+      <button type="button" class="colorBtn" onclick="setColor(colorList['white']);">white</button>
+      <br>
+      
+      <canvas id="drawCanvas" width="256" height="256"></canvas>
+      
+    </div>
+    <div id="timer" class="centeredTxt">
+      <p id="timeLeft"></p>
+    </div>
+    <div class="smol"></div>
+
+    <div id="killScreen">
+      <div id="smolPlayers"></div>
+      <div id="smolCaptions"></div>
+    </div>
+    <div id="youDied">
+      <h2 class="centeredTxt"></h2>
+    </div>
+    <div id="winScreen" class="centeredTxt">
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://192.168.1.17:3000/script.js"></script>
+  </body>
+</html>
