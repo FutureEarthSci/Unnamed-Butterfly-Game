@@ -1,0 +1,86 @@
+body {
+    background-color:#ffffff;
+    font-family:Arial, sans-serif;
+}
+
+#killScreen {
+    text-align: center;
+    position:fixed;
+    top:30%;
+    left:10%;
+}
+
+.toolBtn {
+    display:block;
+    text-align:center;
+    padding:10px;
+    cursor:pointer;
+}
+
+#resetBtn {
+    display:block;
+    text-align:center;
+    padding:10px;
+    cursor:pointer;
+}
+
+.colorBtn {
+    display:inline-block;
+    text-align:center;
+    margin-right:3px;
+    margin-top:5px;
+    padding: 5px;
+    border:4px solid #000000;
+    cursor:pointer;
+}
+
+#butterfliesLoaded {
+    visibility:hidden;
+}
+
+#colorBox {
+    width:25px;
+    height:25px;
+    background:#EE4B2B;
+    margin-left:10px;
+    padding:0px;
+    border:3px solid #000000;
+}
+
+.centeredTxt {
+    display:block;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#poisonCanvas {
+    position:fixed;
+    top:25%;
+    left:50%;
+    margin-top: -128px;
+    margin-left: -256px;
+}
+
+#drawCanvas {
+    position:fixed;
+    top:25%;
+    left:50%;
+    margin-top: -128px;
+    margin-left: -256px;
+
+}
+
+#youDied {
+    position:fixed;
+    top:50%;
+    left:50%;
+    visibility:"hidden";
+}
+
+#smolPlayers {
+    display:inline-flex;
+}
+#smolCaptions {
+    display:inline-flex;
+}
